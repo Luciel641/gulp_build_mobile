@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="copyright" content="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/mobileRespon.js"></script>
+</head>
+<body>
+    <!--头部开始-->
+    <div class="header">
+
+    </div>
+    <!--头部结束-->
+
+    <!--首页轮播开始-->
+    <div class="container-full">
+        <div class="swiper-container index-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"> Slide1</div>
+                <div class="swiper-slide"> Slide2</div>
+                <div class="swiper-slide"> Slide3</div>
+            </div>
+            <div class="pagination"></div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                var mySwiper = $('.index-swiper').swiper({
+                    loop: true,
+                    autoplay: 3000,
+                    autoplayDisableOnInteraction: false,
+                    //其他设置
+                    pagination: '.pagination',
+                    paginationClickable: true,
+                });
+                $('.index-swiper').on('mouseenter', function () {
+                    mySwiper.stopAutoplay();
+                }).on('mouseleave', function () {
+                    mySwiper.startAutoplay();
+                });
+            })
+        </script>
+    </div>
+    <!--首页轮播结束-->
+    <!--内容开始-->
+    <div class="main-content">
+
+    </div>
+    <!--内容结束-->
+
+    <!--脚部开始-->
+    <div class="footer">
+
+    </div>
+    <!--脚部结束-->
+</body>
+</html>
